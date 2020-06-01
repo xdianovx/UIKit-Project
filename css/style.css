@@ -1,3 +1,13 @@
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    box-sizing: border-box;
+}
+
 .card__badge {
     background-color: red;
     margin: 5px;
@@ -46,4 +56,78 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card__list {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    margin: 8px 0px;
+}
+
+.card__list::after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 8px;
+}
+
+:root {
+    --background-range: #a4a4a4;
+}
+.filter {
+    width: 100%;
+}
+.filter > div {
+    padding-top: 20px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+.filter > div > div {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.filter .slider {
+    margin-top: 10px;
+    position: relative;
+    height: 1px;
+    background: #333;
+}
+.filter .color-range {
+    position: absolute;
+    background: var(--background-range, #000);
+    width: 95%;
+    border: none;
+    height: 1px;
+    left: 15px;
+}
+.filter .block-min,
+.block-max {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    background: #fff;
+    border: 1px solid;
+    border-radius: 50%;
+    z-index: 1;
+}
+.filter .block-max {
+    left: 95%;
 }
